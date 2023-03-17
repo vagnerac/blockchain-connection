@@ -26,7 +26,7 @@ export class App {
             // const providerConnected = await this.providerConnection(nodeURL);
             // await this.walletProcessing(providerConnected, walletAddress);
             // const walletSigner = await this.signerConnection(secret, providerConnected);
-            // await this.transactionProcessing(walletSigner);
+            // await this.transactionProcessing(walletSigner, '0.01');
         }catch(err){
             console.log(err);
         }
@@ -78,7 +78,7 @@ export class App {
         }
     }
 
-    async transactionProcessing(walletSigner){
+    async transactionProcessing(walletSigner, amount){
 
     
         const tx = new Transaction(walletSigner, walletAddressTo, amount);
